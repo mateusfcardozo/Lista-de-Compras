@@ -708,7 +708,6 @@ public class View_Home1 extends javax.swing.JFrame {
 
 //                     jPanel "BackgroundConteudo"                              \\
     private void jButton_irListasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_irListasActionPerformed
-
         PnlCard.removeAll();
         PnlCard.add(TodasListas);
         PnlCard.repaint();
