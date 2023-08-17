@@ -747,21 +747,11 @@ public class View_Home extends javax.swing.JFrame {
 //==============================================================================\\
 
 //                         jPanel "AdicionarLista"                              \\
-    private void atualizarStatusLista(String novoStatus) {
-        int selectedRow = jTableListas.getSelectedRow();
-        if (selectedRow >= 0) {
-            int idLista = Integer.parseInt(jTableListas.getValueAt(selectedRow, 0).toString());
+    private void atualizarStatusLista(int idLista, String novoStatus) {
+    ListaDAO listaDAO = new ListaDAO();
+    listaDAO.atualizarStatus(idLista, novoStatus);
+}
 
-            ListaDAO listaDAO = new ListaDAO();
-            listaDAO.atualizarStatus(idLista, novoStatus);
-
-            jTableListas.setValueAt(novoStatus, selectedRow, 5);
-
-            JOptionPane.showMessageDialog(this, "Status da lista atualizado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(this, "Por favor, selecione uma lista na tabela para atualizar o status.", "Lista não selecionada", JOptionPane.WARNING_MESSAGE);
-        }
-    }
     
     private void jButtonVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerificarActionPerformed
         String nomeLista = TXTNomeLista.getText();
@@ -774,15 +764,33 @@ public class View_Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVerificarActionPerformed
 
     private void jButtonCompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCompletarActionPerformed
-        atualizarStatusLista("Completada");
+        int selectedRow = jTableListas.getSelectedRow();
+    if (selectedRow >= 0) {
+        int idLista = Integer.parseInt(jTableListas.getValueAt(selectedRow, 0).toString());
+        atualizarStatusLista(idLista, "Completada");
+        jTableListas.setValueAt("Completada", selectedRow, 5);
+        JOptionPane.showMessageDialog(this, "Status da lista atualizado para Completada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }
     }//GEN-LAST:event_jButtonCompletarActionPerformed
 
     private void jButtonPendenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPendenteActionPerformed
-        atualizarStatusLista("Pendente");
+         int selectedRow = jTableListas.getSelectedRow();
+    if (selectedRow >= 0) {
+        int idLista = Integer.parseInt(jTableListas.getValueAt(selectedRow, 0).toString());
+        atualizarStatusLista(idLista, "Pendente");
+        jTableListas.setValueAt("Pendente", selectedRow, 5);
+        JOptionPane.showMessageDialog(this, "Status da lista atualizado para Pendente com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }
     }//GEN-LAST:event_jButtonPendenteActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-        atualizarStatusLista("Cancelada");
+         int selectedRow = jTableListas.getSelectedRow();
+    if (selectedRow >= 0) {
+        int idLista = Integer.parseInt(jTableListas.getValueAt(selectedRow, 0).toString());
+        atualizarStatusLista(idLista, "Cancelada");
+        jTableListas.setValueAt("Cancelada", selectedRow, 5);
+        JOptionPane.showMessageDialog(this, "Status da lista atualizado para Cancelada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void ButtonAtualizarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAtualizarMousePressed
