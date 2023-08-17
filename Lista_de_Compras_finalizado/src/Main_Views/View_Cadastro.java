@@ -242,7 +242,7 @@ public class View_Cadastro extends javax.swing.JFrame {
         usuario.setData_Criacao_User(timestamp);
 
         usuarioDAO.cadastroUsuario(usuario);
-        JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+        JOptionPane.showMessageDialog( this, "Usuário cadastrado com sucesso!");
     }//GEN-LAST:event_jButtonCadastroActionPerformed
 
     private void jButtonFazerLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFazerLoginActionPerformed

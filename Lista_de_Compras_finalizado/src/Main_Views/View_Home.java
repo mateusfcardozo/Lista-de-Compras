@@ -15,17 +15,17 @@ import raven.cell.TableActionCellEditor;
 import raven.cell.TableActionCellRender;
 import raven.cell.TableActionEvent;
 
-public class View_Home1 extends javax.swing.JFrame {
+public class View_Home extends javax.swing.JFrame {
 
     private int idUsuario;
     private int selectedListaId = -1;
     private List<Itens> displayedItensList = new ArrayList<>();
 
-    public View_Home1() {
+    public View_Home() {
         initComponents();
     }
 
-    public View_Home1(int idUsuario) {
+    public View_Home(int idUsuario) {
         initComponents();
         this.idUsuario = idUsuario;
         PreencherTabelaListas();
@@ -1166,14 +1166,22 @@ public class View_Home1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(View_Home1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(View_Home1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(View_Home1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(View_Home1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1187,7 +1195,7 @@ public class View_Home1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
 
-                new View_Home1().setVisible(true);
+                new View_Home().setVisible(true);
             }
         });
     }

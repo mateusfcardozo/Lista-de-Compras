@@ -218,7 +218,7 @@ public class View_Login extends javax.swing.JFrame {
         Usuario usuario = usuarioDAO.obterUsuarioPorId(idUsuario);
         System.out.println("id do usuario:" + idUsuario);
 
-        new View_Home1(idUsuario).setVisible(true);
+        new View_Home(idUsuario).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
